@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'formation-angular';
+  title: string = 'Welcome';
+  isDisabled: boolean = true;
+  username: string = 'Yessine'
+
+  onButtonClick() {
+    console.log('Clicked')
+  }
 }
