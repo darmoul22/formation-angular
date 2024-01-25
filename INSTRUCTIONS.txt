@@ -11,3 +11,8 @@ TO START A NEW PROJECT :
 TO GENERATE FILES AND SCHEMATICS
   - ng generate 'schematic'
   - for reference : https://angular.io/cli/generate
+
+
+
+  new component : ng generate component 'component-name' (--no-standalone)
+  new module : ng generate module 'module-name' --routing
