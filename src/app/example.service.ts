@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environment.development";
+import {delay} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,7 @@ API_URL = environment.API_URL + 'example'
 
   getExampleData(){
     return this.httpClient
-      .get<[{
-      id: number,
-      title: string
-    }]>(this.API_URL)
+      .get(this.API_URL)
+     // .pipe(delay(1000))
   }
 }

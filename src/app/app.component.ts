@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.exampleService.getExampleData().subscribe(
       {
-        next: value => {
+        next: (value: any) => {
           this.data = value[0]
           console.log(value)
         },
