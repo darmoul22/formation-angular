@@ -16,3 +16,11 @@ TO GENERATE FILES AND SCHEMATICS
 
   new component : ng generate component 'component-name' (--no-standalone)
   new module : ng generate module 'module-name' --routing
+  environments : ng g environments
+  service : ng g service 'service-name'
+
+
+to start json server :
+  - npm install
+  - json-server --watch db.json --port 3000
+
