@@ -1,0 +1,13 @@
+ENVIRONMENT SETTINGS :
+1 - Install Node/npm (for angular 17 : NodeJs ^18.13.0 || ^20.9.0)
+  Or
+  - Install Nvm (guide : https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
+
+2 - Install Angular Cli : npm install -g @angular/cli
+
+TO START A NEW PROJECT :
+ - ng new 'app-name' --no-standalone
+
+TO GENERATE FILES AND SCHEMATICS
+  - ng generate 'schematic'
+  - for reference : https://angular.io/cli/generate
