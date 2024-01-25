@@ -1,0 +1,36 @@
+<!-- app.component.html -->
+<div>
+  <h2>Reactive Form</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="myForm.get('name')?.hasError('required') && myForm.get('name')?.touched">
+        Name is required.
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+      <div *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.touched">
+        Email is required.
+      </div>
+      <div *ngIf="myForm.get('email')?.hasError('email') && myForm.get('email')?.touched">
+        Invalid email format.
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+
+  <!-- Display form data -->
+  <div *ngIf="submitted">
+    <h3>Form Data:</h3>
+    <p>Name: {{ myForm.value.name }}</p>
+    <p>Email: {{ myForm.value?.email }}</p>
+  </div>
+</div>
