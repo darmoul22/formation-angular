@@ -1,0 +1,13 @@
+<div class="container">
+  <div [ngClass]="{'active': isActive, 'disabled': !isActive}">
+    This div has dynamic classes based on the value of 'isActive'.
+  </div>
+  <button (click)="toggle()">Toggle</button>
+
+  <div [ngStyle]="{'background-color': bgColor, 'color': textColor}">
+    This div has dynamic styles based on the values of 'bgColor' and 'textColor'.
+  </div>
+  <select [(ngModel)]="bgColor" >
+    <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+  </select>
+</div>

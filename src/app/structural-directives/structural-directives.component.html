@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="first">
+    <div class="if-container">
+      <!--  New syntax-->
+      @if (!disabled){
+        <p>not disabled</p>
+      } @else {
+        <p>disabled</p>
+      }
+      <!--  old syntax-->
+      <p *ngIf="!disabled">not disabled</p>
+    </div>
+
+
+    <div class="for-container">
+      <div>
+        <!--  New syntax-->
+        @for (product of productList; track product.id){
+          <p>{{product.name}}</p>
+        }
+      </div>
+      <div>
+        <!--  old syntax-->
+        <p *ngFor="let product of productList">{{product.name}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="second">
+    <div class="switch-container">
+      <!--  New syntax-->
+      @switch (status){
+        @case ('active'){ <p>The status is active.</p>}
+        @case ('inactive'){ <p>The status is inactive.</p>}
+        @default {
+          <p>The status is unknown.</p>
+        }
+      }
+      <div [ngSwitch]="status">
+        <!--  old syntax-->
+        <p *ngSwitchCase="'active'">The status is active.</p>
+        <p *ngSwitchCase="'inactive'">The status is inactive.</p>
+        <p *ngSwitchDefault>The status is unknown.</p>
+      </div>
+    </div>
+  </div>
+</div>
