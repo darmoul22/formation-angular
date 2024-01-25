@@ -4,6 +4,11 @@ import {Component1Component} from "./component-1/component-1.component";
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: "full",
+    redirectTo: 'component1'
+  },
+  {
     path: 'component1',
     component: Component1Component,
   }
